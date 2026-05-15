@@ -1,0 +1,14 @@
+#!/bin/sh
+mount -t proc proc /proc
+mount -t sysfs sysfs /sys
+mount -t devtmpfs devtmpfs /dev
+
+echo "----------------------------------------------------"
+echo "  SISTEMA ARRANCADO - KEVIN CRUZATE"
+echo "----------------------------------------------------"
+
+addgroup -g 1001 student
+adduser -u 1001 -G student -D student
+echo "student:student" | chpasswd
+
+exec setsid cttyhack setuidgid student /bin/sh
