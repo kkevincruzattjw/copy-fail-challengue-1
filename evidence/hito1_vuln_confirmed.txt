@@ -1,0 +1,9 @@
+]633;E;echo "=== HITO 1: KERNEL VULNERABLE CONFIRMADO ===";a4195800-c76e-4689-bd40-e926cf896e47]633;C=== HITO 1: KERNEL VULNERABLE CONFIRMADO ===
+Fecha: Sun May 17 05:44:03 UTC 2026
+Hostname: codespaces-07b3bc
+Kernel: 6.8.0-1044-azure
+Identidad: uid=0(root) gid=0(root) groups=0(root)
+Módulos AF_ALG:
+(no encontrado con lsmod)
+algif_aead en /proc/modules:
+(no encontrado)
