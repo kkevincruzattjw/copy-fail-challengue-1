@@ -1,9 +1,10 @@
 === HITO 3: MITIGACION TEMPORAL ===
 Fecha: Tue May 19 02:50:36 UTC 2026
+Hostname: copy-fail-Kevin-Cruzate
 Kernel: 7.1.0-rc3-g70eda68668d1
 algif_aead en lsmod:
-(modulo NO cargado - mitigacion activa)
+(módulo NO cargado - mitigacion activa)
 Contenido disable-algif.conf:
 install algif_aead /bin/false
 Intento exploit post-mitigacion:
-su: Permission denied
+su: Permission denied - exploit falló como se esperaba
