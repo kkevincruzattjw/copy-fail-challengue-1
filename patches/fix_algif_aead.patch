@@ -1,0 +1,15 @@
+diff --git a/crypto/algif_aead.c b/crypto/algif_aead.c
+index cb651ab58..5c499a027 100644
+--- a/crypto/algif_aead.c
++++ b/crypto/algif_aead.c
+@@ -186,8 +186,8 @@ static int _aead_recvmsg(struct socket *sock, struct msghdr *msg,
+ 	 * is initiated.
+ 	 */
+ 
+-	/* Use the RX SGL as source (and destination) for crypto op. */
+-	rsgl_src = areq->first_rsgl.sgl.sgt.sgl;
++	/* Use TX SGL as source and RX SGL as destination (out-of-place) */
++	rsgl_src = tsgl_src;
+ 
+ 	memcpy_sglist(rsgl_src, tsgl_src, ctx->aead_assoclen);
+ 
